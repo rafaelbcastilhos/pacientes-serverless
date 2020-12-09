@@ -59,7 +59,8 @@ module.exports.obterPaciente = async (event) => {
       statusCode: 200,
       body: JSON.stringify(paciente, null, 2),
     };
-  } catch (err) {
+  } 
+  catch (err) {
     console.log("Error", err);
     return {
       statusCode: err.statusCode ? err.statusCode : 500,
@@ -100,7 +101,8 @@ module.exports.cadastrarPaciente = async (event) => {
     return {
       statusCode: 201,
     };
-  } catch (err) {
+  } 
+  catch (err) {
     console.log("Error", err);
     return {
       statusCode: err.statusCode ? err.statusCode : 500,
